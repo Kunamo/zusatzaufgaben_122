@@ -1,5 +1,5 @@
 #!/bin/bash
 
-# marked for documentation -> Mentions default variables. List some more default variables.
-hostname="$(hostname)"
-echo "Dieses Skript läuft auf $hostname"
+# marked for documentation -> Mentions default variables. List some more useful default variables.
+var="$(hostname)"
+echo "Dieses Skript läuft auf $var"
