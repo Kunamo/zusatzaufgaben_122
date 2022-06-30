@@ -1,23 +1,26 @@
 #!/bin/bash
-while true; do
-  for i in {1..1} ; do
-    #Disply all shell scripts starting with "Application" and ending with ".sh"
-    #echo Application*.sh | tr -d ".sh"
-    var="$(echo Application*.sh | tr -d ".sh")"; echo "$var"
-    echo "Use 'start' or 'exit' application"
-    read -r command
+while true;do
+    #Display available Applications
+    #echo Application*.sh | tr -d ".sh" #Display all files beginning w/ "Application" + ending w/ ".sh" ... then cut of ".sh"
 
-    if [ "$command" == "start ${var}" ]; then
-      echo "Success"
-    elif [ "$command" == "exit" ]; then
-      echo "Exiting application"
-    else
-      echo "Not an available command"
-    fi
+    listApplication=(Application*.sh)
+    oneApplication=Application*.sh
 
-    #start ${application}.sh
-    wait
-  done
+    for oneApplication in "${listApplication[@]}"; do
+      echo "$oneApplication"
+    done
+
+    allApps=(${listApplication[@]}) #This array indeed has all applications in it, checked with for loop echo
+
+    read command
+    cmdStr="$command"
+    cmdArr=($cmdStr)
+
+
+    for i in "${allApps[@]}"; do
+      if [[ "${cmdArr[0]}" == "exec" ]] && [[ "${cmdArr[1]}" == $i  ]]; then
+            echo "${cmdArr[@]}"
+            echo "success"
+      fi
+    done
 done
-
-#Progess: I'm rn at -> Recognizing which application is meant. I'm thinking of using an array or an for *.sh function (like in 15.sh / 14.sh)
