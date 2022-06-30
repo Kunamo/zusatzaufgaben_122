@@ -1,0 +1,7 @@
+Ich habe keie Linux Umgebung und habe die meiste Zeit damit verbracht eine Arch Linux Distro (Majaro)
+auf Virtualbox zum laufen zu bringen, der Download auf der VM für ein CodeEditor ging sehr lange bis Ich herausfand
+das Ich die Mirrorliste updaten sollte, das habe Ich erst nach einiger Zeit (+6h) herausgefunden, und deshalb hatte Ich
+keine Zeit, mehr die Scripts fertig zu schreiben. Ich habe einfach Iteration "0" gemacht und denke das meine Skripts gute
+Basis für die erweiterten und vollständigen Skripte sind. Tut mir leid, Ich musste stressen.
+
+Freundliche Grüsse Elias.
